@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    src: url(../fonts/Roboto-Black.ttf);
+    src: url(../fonts/Roboto-Bold.ttf);
+    src: url(../fonts/Roboto-Italic.ttf);
+    src: url(../fonts/Roboto-Regular.ttf);
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+h1 {
+    color: pink;
+    font-family: "Roboto";
+}
