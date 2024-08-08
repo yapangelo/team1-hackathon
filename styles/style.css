@@ -96,8 +96,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  display: flex;
-  height: 100vh;
 }
 
 .mt {
@@ -182,18 +180,10 @@ a {
 }
 
 .container {
-  background-image: url(../images/test.gif);
+  display: flex;
+  align-items: baseline;
   height: 100vh;
   width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
-  overflow: none;
 }
 
 .tagline {

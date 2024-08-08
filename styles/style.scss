@@ -25,8 +25,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    display: flex;
-    height: 100vh;
 }
 
 .mt {
@@ -128,29 +126,19 @@ a {
 }
 
 .container {
-    background-image: url(../images/test.gif);
+    display: flex;
+    align-items: baseline;
     height: 100vh;
     width: 100vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    overflow: none;
 }
 
 
 .tagline {
     font-size: 8rem;
-    background: linear-gradient(90deg,
-            #272626e0, rgb(198, 198, 198));
+    background: linear-gradient(90deg,#272626e0, rgb(198, 198, 198));
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
-
     letter-spacing: 2px;
     position: absolute;
     top: 1em;
