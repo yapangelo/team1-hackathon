@@ -32,7 +32,6 @@ function medalParser(data) {
 async function getCountry() {
     const response = await olympicApi.getCountries()
     const countryData = medalParser(response)
-    console.log(countryData)
     return countryData
 }
 
@@ -89,7 +88,6 @@ const popupFullRender = () => {
     const countryID = document.querySelectorAll(".mt__dynamic-id")
     const popText = document.querySelectorAll(".popuptext")
     for (let i = 0; i < popText.length; i++) {
-        console.log(countryID[i].innerText)
         if (countryID[i].innerText === "CHN") {
             popupTextRender(chinaNewArray, popText[i])
         } else if (countryID[i].innerText === "USA") {
