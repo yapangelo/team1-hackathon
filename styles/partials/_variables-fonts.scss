@@ -36,3 +36,9 @@ $Thin: 100;
     font-weight: $Light;
     color: white;
 }
+
+@mixin tagline {
+    font-family: "Roboto";
+    font-size: 8rem;
+    font-weight: $Bold;
+}
