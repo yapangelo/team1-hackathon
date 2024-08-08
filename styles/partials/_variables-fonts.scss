@@ -17,21 +17,22 @@ $Light: 300;
 $Thin: 100;
 
 @mixin title {
-    font-family: "Roboto";
+    // font-family: "Roboto";
+    font-family: "arial black";
     font-size: 1.5rem;
     font-weight: $Black;
     color: white;
 }
 
 @mixin header {
-    font-family: "Roboto";
+    font-family: "arial black";
     font-size: .75rem;
     font-weight: $Black;
     color: white;
 }
 
 @mixin countertype {
-    font-family: "Roboto";
+    font-family: "arial black";
     font-size: 1rem;
     font-weight: $Light;
     color: white;
