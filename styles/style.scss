@@ -9,7 +9,7 @@
 
 h1 {
     @include title;
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 .75rem;
 }
 
 body {
@@ -38,6 +38,7 @@ body {
         background-color: rgba(0, 0, 0, 0.5);          
         padding: .5rem 1rem;
         width: 415px;
+        border-top: 1px solid red;
     }
 
     &__static {
@@ -99,9 +100,9 @@ body {
 
 .tagline {
     @include tagline;
-    letter-spacing: 2px;
+    letter-spacing: -5px;
     position: fixed;
-    top: 9rem;
+    top: 9.5rem;
     left: -0.15em;
     background-image: linear-gradient(90deg,#272626e0, rgb(198, 198, 198));
     background-clip: text;

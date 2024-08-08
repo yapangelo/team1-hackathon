@@ -7,6 +7,10 @@
   src: url(/fonts/Roboto-Thin.ttf);
   src: url(/fonts/Roboto-Regular.ttf);
 }
+@font-face {
+  font-family: "Oswald";
+  src: url(/fonts/Oswald-Bold.ttf);
+}
 .popup {
   position: relative;
   display: inline-block;
@@ -18,12 +22,13 @@
   width: 500px;
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
+  text-align: center;
   border-radius: 20px; /* Increased border-radius for more rounded corners */
-  padding: 1rem;
+  padding: 8px 0;
   position: fixed;
   z-index: 1;
-  left: 45%;
-  top: 37%;
+  top: 36.75%;
+  left: 37%;
   margin-left: -80px;
 }
 
@@ -81,7 +86,7 @@ h1 {
   font-size: 1.5rem;
   font-weight: 900;
   color: white;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 0.75rem;
 }
 
 body {
@@ -113,6 +118,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 1rem;
   width: 415px;
+  border-top: 1px solid red;
 }
 .mt__static {
   margin-bottom: 0.5rem;
@@ -167,9 +173,9 @@ body {
   font-family: "Roboto";
   font-size: 11rem;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: -5px;
   position: fixed;
-  top: 9rem;
+  top: 9.5rem;
   left: -0.15em;
   background-image: linear-gradient(90deg, rgba(39, 38, 38, 0.8784313725), rgb(198, 198, 198));
   background-clip: text;
