@@ -16,7 +16,7 @@
 .popup .popuptext {
   visibility: hidden;
   width: 300px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   text-align: center;
   border-radius: 20px; /* Increased border-radius for more rounded corners */
@@ -25,6 +25,7 @@
   z-index: 1;
   left: 50%;
   margin-left: -80px;
+  overflow: scroll;
 }
 
 .popup .popuptext::after {
@@ -81,6 +82,7 @@ h1 {
   font-size: 1.5rem;
   font-weight: 900;
   color: white;
+  text-wrap: nowrap;
   padding: 0 0 0 1rem;
 }
 
@@ -97,13 +99,13 @@ body {
   font-size: 0.75rem;
   font-weight: 900;
   color: white;
-  width: 450px;
+  width: 500px;
   position: absolute;
   padding: 1rem 10rem 1rem 3rem;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3137254902), rgba(39, 38, 38, 0));
   border-radius: 2rem;
   box-sizing: border-box;
-  top: 30%;
+  top: 35%;
   overflow: hidden;
 }
 .mt__line {
@@ -112,6 +114,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 1rem;
   width: 415px;
+  border-top: 1px red solid;
 }
 .mt__static {
   margin-bottom: 0.5rem;
@@ -159,17 +162,19 @@ body {
 
 .tagline {
   font-family: "Roboto";
-  font-size: 10rem;
+  font-size: 11rem;
   font-weight: 900;
   letter-spacing: 2px;
-  position: absolute;
-  top: 1em;
+  position: fixed;
+  top: 1.25em;
   left: -0.15em;
   background-image: linear-gradient(90deg, rgba(39, 38, 38, 0.8784313725), rgb(198, 198, 198));
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   text-wrap: nowrap;
   z-index: 0;
+  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */

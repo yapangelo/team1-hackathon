@@ -8,7 +8,6 @@
     src: url(/fonts/Roboto-Regular.ttf);
 }
 
-
 $Black: 900;
 $Bold: 700;
 $Regular: 400;
@@ -21,6 +20,7 @@ $Thin: 100;
     font-size: 1.5rem;
     font-weight: $Black;
     color: white;
+    text-wrap: nowrap;
 }
 
 @mixin header {
@@ -39,6 +39,6 @@ $Thin: 100;
 
 @mixin tagline {
     font-family: "Roboto";
-    font-size: 10rem;
+    font-size: 11rem;
     font-weight: $Black;
 }

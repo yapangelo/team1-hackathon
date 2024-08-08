@@ -7,7 +7,7 @@
 .popup .popuptext {
     visibility: hidden;
     width: 300px;
-    background-color: rgb(0, 0, 0, .75);
+    background-color: rgb(0, 0, 0, .80);
     color: #fff;
     text-align: center;
     border-radius: 20px; /* Increased border-radius for more rounded corners */
@@ -16,6 +16,7 @@
     z-index: 1;
     left: 50%;
     margin-left: -80px;
+    overflow: scroll;
 }
 
 .popup .popuptext::after {
