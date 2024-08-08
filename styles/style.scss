@@ -1,4 +1,6 @@
 @use '../styles/partials/variables-fonts' as *;
+@use '../styles/partials/pop-up' as *;
+@use '../styles/partials/animation' as *;
 
 * {
     margin: 0;
@@ -45,10 +47,10 @@ body {
     }
 
     &__medal {
-        padding-right: 2rem;
+        margin-right: 2rem;
 
-        &--no-padding {
-            padding-right: 0;
+        &--no-margin {
+            margin-right: 0;
         }
     }
 
@@ -68,7 +70,7 @@ body {
 
     &__dynamic-team {
         width: 33px;
-        padding-right: 4.9rem;
+        margin-right: 4.9rem;
     }
 
     &__dynamic-numbers {

@@ -7,6 +7,70 @@
   src: url(/fonts/Roboto-Thin.ttf);
   src: url(/fonts/Roboto-Regular.ttf);
 }
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 20px; /* Increased border-radius for more rounded corners */
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Basic styles for the image */
+.mt__medal {
+  width: 200px;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+/* Define the spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Apply the spin animation on hover */
+.mt__medal:hover {
+  animation: spin 0.5s linear infinite;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -54,10 +118,10 @@ body {
   padding-right: 6rem;
 }
 .mt__medal {
-  padding-right: 2rem;
+  margin-right: 2rem;
 }
-.mt__medal--no-padding {
-  padding-right: 0;
+.mt__medal--no-margin {
+  margin-right: 0;
 }
 .mt__dynamic-line {
   font-family: "Roboto";
@@ -76,7 +140,7 @@ body {
 }
 .mt__dynamic-team {
   width: 33px;
-  padding-right: 4.9rem;
+  margin-right: 4.9rem;
 }
 .mt__dynamic-numbers {
   width: 22px;

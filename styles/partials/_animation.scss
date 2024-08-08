@@ -1,0 +1,21 @@
+/* Basic styles for the image */
+.mt__medal {
+    width: 200px;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+/* Define the spin animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the spin animation on hover */
+.mt__medal:hover {
+    animation: spin .5s linear infinite;
+}
