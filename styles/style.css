@@ -1,12 +1,88 @@
 @font-face {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  src: url(../fonts/Roboto-Black.ttf);
-  src: url(../fonts/Roboto-Bold.ttf);
-  src: url(../fonts/Roboto-Italic.ttf);
-  src: url(../fonts/Roboto-Regular.ttf);
-  src: url(../fonts/Roboto-Thin.ttf);
+  src: url(/fonts/Roboto-Black.ttf);
+  src: url(/fonts/Roboto-Bold.ttf);
+  src: url(/fonts/Roboto-Italic.ttf);
+  src: url(/fonts/Roboto-Light.ttf);
+  src: url(/fonts/Roboto-Thin.ttf);
+  src: url(/fonts/Roboto-Regular.ttf);
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
-  color: pink;
   font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+  padding: 0 0 0 1rem;
+}
+
+body {
+  background-image: url(../assets/hero-background.gif);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.mt {
+  font-family: "Roboto";
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: white;
+  width: 450px;
+  margin: 0 auto;
+}
+.mt__line {
+  display: flex;
+  align-items: baseline;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  width: 415px;
+}
+.mt__static {
+  margin-bottom: 0.5rem;
+}
+.mt__number {
+  padding-right: 3rem;
+  font-weight: 900;
+}
+.mt__team {
+  padding-right: 6rem;
+}
+.mt__medal {
+  padding-right: 2rem;
+}
+.mt__medal--no-padding {
+  padding-right: 0;
+}
+.mt__dynamic-line {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  width: 415px;
+}
+.mt__flag {
+  padding-right: 0.5rem;
+}
+.mt__dynamic-team {
+  width: 33px;
+  padding-right: 4.9rem;
+}
+.mt__dynamic-numbers {
+  width: 22px;
+  padding-right: 2.35rem;
+}
+.mt__dynamic-numbers--black {
+  font-weight: 900;
+  padding-right: 0;
 }/*# sourceMappingURL=style.css.map */

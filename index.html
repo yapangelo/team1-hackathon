@@ -7,7 +7,31 @@
     <link rel="stylesheet" href="./styles/style.css">
     <title>Olympic Medal and maybe events tracker</title>
 </head>
-<body>
-    <h1>heyo</h1>
+<body> <!-- mt = medal tracker -->
+    <div class="mt">
+        <div class="mt__static">
+            <h1>MEDAL TRACKER</h1>
+            <div class="mt__line">
+                <div class="mt__number">#</div>
+                <div class="mt__team">TEAM/NOCs</div>
+                <div class="mt__medal-container"></div>
+                <img src="./assets/gold.svg" alt="gold" class="mt__medal">
+                <img src=".//assets/silver.svg" alt="gold" class="mt__medal">
+                <img src="./assets/bronze.svg" alt="gold" class="mt__medal">
+                <img src="./assets/total-medals.svg" alt="gold" class="mt__medal mt__medal--no-padding">
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">1</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team">USA</div>
+                <div class="mt__dynamic-numbers">27</div>
+                <div class="mt__dynamic-numbers">35</div>
+                <div class="mt__dynamic-numbers">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,13 +1,84 @@
-@font-face {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    src: url(../fonts/Roboto-Black.ttf);
-    src: url(../fonts/Roboto-Bold.ttf);
-    src: url(../fonts/Roboto-Italic.ttf);
-    src: url(../fonts/Roboto-Regular.ttf);
-    src: url(../fonts/Roboto-Thin.ttf);
+@use '../styles/partials/variables-fonts' as *;
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    color: pink;
-    font-family: "Roboto";
+    @include title;
+    padding: 0 0 0 1rem;
+}
+
+body {
+    background-image: url(../assets/hero-background.gif);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed
+}
+
+.mt {
+    @include header;
+    width: 450px;
+    margin: 0 auto;
+
+    &__line {
+        display: flex;
+        align-items: baseline;
+        background-color: rgba(0, 0, 0, 0.5);          
+        padding: .5rem 1rem;
+        width: 415px;
+    }
+
+    &__static {
+        margin-bottom: .5rem;
+    }
+
+    &__number {
+        padding-right: 3rem;
+        font-weight: $Black;
+    }
+
+    &__team {
+        padding-right: 6rem;
+    }
+
+    &__medal {
+        padding-right: 2rem;
+
+        &--no-padding {
+            padding-right: 0;
+        }
+    }
+
+    &__dynamic-line {
+        @include countertype;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);          
+        padding: .5rem 1rem;
+        margin-bottom: .5rem;
+        width: 415px;
+    }
+
+    &__flag {
+        padding-right: .5rem;
+    }
+
+    &__dynamic-team {
+        width: 33px;
+        padding-right: 4.9rem;
+    }
+
+    &__dynamic-numbers {
+        width: 22px;
+        padding-right: 2.35rem;
+
+        &--black {
+            font-weight: $Black;
+            padding-right: 0;
+        }
+    }
+    
 }
