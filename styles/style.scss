@@ -22,13 +22,14 @@ body {
 
 .mt {
     @include header;
-    width: 500px;
+    width: 600px;
     position: absolute;
     padding: 1rem 10rem 1rem 3rem;
-    background-image: linear-gradient(90deg, #ffffff50, #27262600);
+    background-image: linear-gradient(90deg, #ffffff71, #27262600);
     border-radius: 2rem;
     box-sizing: border-box;
-    top: 35%;
+    left: 1%;
+    top: 32%;
     overflow: hidden;
 
     &__line {
@@ -37,15 +38,16 @@ body {
         background-color: rgba(0, 0, 0, 0.5);          
         padding: .5rem 1rem;
         width: 415px;
-        border-top: 1px red solid;
     }
 
     &__static {
         margin-bottom: .5rem;
+        width: 600px;
     }
 
     &__number {
-        padding-right: 3rem;
+        width: 20px;
+        padding-right: 2rem;
         font-weight: $Black;
     }
 
@@ -73,16 +75,19 @@ body {
 
     &__flag {
         padding-right: .5rem;
+        height: 25px;
+        width: 45px;
     }
 
     &__dynamic-team {
         width: 33px;
-        margin-right: 4.9rem;
+        margin-right: 4.3rem;
     }
 
     &__dynamic-numbers {
         width: 22px;
         padding-right: 2.35rem;
+        text-align: center;
 
         &--black {
             font-weight: $Black;
@@ -96,7 +101,7 @@ body {
     @include tagline;
     letter-spacing: 2px;
     position: fixed;
-    top: 1.25em;
+    top: 9rem;
     left: -0.15em;
     background-image: linear-gradient(90deg,#272626e0, rgb(198, 198, 198));
     background-clip: text;
@@ -106,5 +111,4 @@ body {
     -moz-text-fill-color: transparent;
     text-wrap: nowrap;
     z-index: 0;
-    overflow: hidden;
 }

@@ -15,17 +15,16 @@
 
 .popup .popuptext {
   visibility: hidden;
-  width: 300px;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
-  text-align: center;
   border-radius: 20px; /* Increased border-radius for more rounded corners */
-  padding: 8px 0;
-  position: absolute;
+  padding: 1rem;
+  position: fixed;
   z-index: 1;
-  left: 50%;
+  left: 45%;
+  top: 37%;
   margin-left: -80px;
-  overflow: scroll;
 }
 
 .popup .popuptext::after {
@@ -82,7 +81,6 @@ h1 {
   font-size: 1.5rem;
   font-weight: 900;
   color: white;
-  text-wrap: nowrap;
   padding: 0 0 0 1rem;
 }
 
@@ -99,13 +97,14 @@ body {
   font-size: 0.75rem;
   font-weight: 900;
   color: white;
-  width: 500px;
+  width: 600px;
   position: absolute;
   padding: 1rem 10rem 1rem 3rem;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3137254902), rgba(39, 38, 38, 0));
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4431372549), rgba(39, 38, 38, 0));
   border-radius: 2rem;
   box-sizing: border-box;
-  top: 35%;
+  left: 1%;
+  top: 32%;
   overflow: hidden;
 }
 .mt__line {
@@ -114,13 +113,14 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 1rem;
   width: 415px;
-  border-top: 1px red solid;
 }
 .mt__static {
   margin-bottom: 0.5rem;
+  width: 600px;
 }
 .mt__number {
-  padding-right: 3rem;
+  width: 20px;
+  padding-right: 2rem;
   font-weight: 900;
 }
 .mt__team {
@@ -146,14 +146,17 @@ body {
 }
 .mt__flag {
   padding-right: 0.5rem;
+  height: 25px;
+  width: 45px;
 }
 .mt__dynamic-team {
   width: 33px;
-  margin-right: 4.9rem;
+  margin-right: 4.3rem;
 }
 .mt__dynamic-numbers {
   width: 22px;
   padding-right: 2.35rem;
+  text-align: center;
 }
 .mt__dynamic-numbers--black {
   font-weight: 900;
@@ -166,7 +169,7 @@ body {
   font-weight: 900;
   letter-spacing: 2px;
   position: fixed;
-  top: 1.25em;
+  top: 9rem;
   left: -0.15em;
   background-image: linear-gradient(90deg, rgba(39, 38, 38, 0.8784313725), rgb(198, 198, 198));
   background-clip: text;
@@ -176,5 +179,4 @@ body {
   -moz-text-fill-color: transparent;
   text-wrap: nowrap;
   z-index: 0;
-  overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
