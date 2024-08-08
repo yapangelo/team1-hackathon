@@ -143,6 +143,8 @@ body {
 }
 .mt__flag {
   padding-right: 0.5rem;
+  height: 25px;
+  width: 45px;
 }
 .mt__dynamic-team {
   width: 33px;

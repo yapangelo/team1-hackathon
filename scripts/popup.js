@@ -1594,13 +1594,42 @@ const gerArray = [
     },
 ]
 
-console.log(usaArray)
-console.log(chinaArray)
-console.log(ausArray)
-console.log(fraArray)
-console.log(gbrArray)
-console.log(korArray)
-console.log(japArray)
-console.log(itaArray)
-console.log(nedArray)
-console.log(gerArray)
+// Converting Array Data
+
+// console.log(usaArray)
+// console.log(chinaArray)
+// console.log(ausArray)
+// console.log(fraArray)
+// console.log(gbrArray)
+// console.log(korArray)
+// console.log(japArray)
+// console.log(itaArray)
+// console.log(nedArray)
+// console.log(gerArray)
+
+const popupDataParser = (array) => {
+    const newArray = []
+    for(let i = 0; i < array.length; i++) {
+        const sportName = Object.keys(array[i])[0]
+        const sportArray = [
+            sportName,
+            array[i][sportName][0].Gold,
+            array[i][sportName][0].Silver,
+            array[i][sportName][0].Bronze,
+            array[i][sportName][0].Total,
+        ]
+        newArray.push(sportArray)
+    }
+    return newArray
+}
+
+const usaNewArray = popupDataParser(usaArray)
+const chinaNewArray = popupDataParser(chinaArray)
+const ausNewArray = popupDataParser(ausArray)
+const fraNewArray = popupDataParser(fraArray)
+const gbrNewArray = popupDataParser(gbrArray)
+const korNewArray = popupDataParser(korArray)
+const japNewArray = popupDataParser(japArray)
+const itaNewArray = popupDataParser(itaArray)
+const nedNewArray = popupDataParser(nedArray)
+const gerNewArray = popupDataParser(gerArray)

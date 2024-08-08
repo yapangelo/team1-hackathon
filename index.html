@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./scripts/popup.js"></script>
-    <script src="./scripts/script.js" type="module" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="./scripts/api.js" defer></script>
+    <script src="./scripts/popup.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
     <link rel="stylesheet" href="./styles/style.css">
     <title>Olympic Medal and maybe events tracker</title>
 </head>
@@ -24,151 +26,148 @@
                 <img src="./assets/total-medals.svg" alt="gold" class="mt__medal mt__medal--no-margin">
             </div>
         </div>
-
-
         <div class="mt__dynamic">
             <div class="mt__dynamic-line">
                 <div class="mt__number">1</div>
                 <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
                 <span class="popuptext" id="myPopup">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
-            </div>
-        </div>
-        <div class="mt__dynamic">
-            <div class="mt__dynamic-line">
-                <div class="mt__number">1</div>
-                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
-                <div class="mt__dynamic-team popup" id="popup">USA
-                <span class="popuptext" id="myPopup">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </span></div>
-                <div class="mt__dynamic-numbers">27</div>
-                <div class="mt__dynamic-numbers">35</div>
-                <div class="mt__dynamic-numbers">32</div>
-                <div class="mt__dynamic-numbers mt__dynamic-numbers--black">94</div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
             </div>
         </div>
 
-
-
+        <!-- Test Rows -->
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">2</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
+        <div class="mt__dynamic">
+            <div class="mt__dynamic-line">
+                <div class="mt__number">3</div>
+                <img src="./assets/USA.svg" alt="USA" class="mt__flag">
+                <div class="mt__dynamic-team popup" id="popup"><p class="mt__dynamic-id">USA</p>
+                <span class="popuptext" id="myPopup">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </span></div>
+                <div class="mt__dynamic-numbers mt__gold-medals">27</div>
+                <div class="mt__dynamic-numbers mt__silver-medals">35</div>
+                <div class="mt__dynamic-numbers mt__bronze-medals">32</div>
+                <div class="mt__dynamic-numbers mt__dynamic-numbers--black mt__total-medals">94</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
