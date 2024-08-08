@@ -10,8 +10,7 @@
 
 body {
     font-family: "arial black";
-    // margin: 0;
-    // padding: 0;
+
 }
 
 h1 {
@@ -26,28 +25,25 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+    display: flex;
+    height: 100vh;
 }
 
 .mt {
     @include header;
-    // width: 45%;
     margin: 0 auto;
 
     &__line {
-        // display: flex;
         align-items: baseline;
-        // background-color: rgba(0, 0, 0, 0.5);
         background: linear-gradient(90deg,
-                #272626e0, rgba(198, 198, 198, 0.053)) // padding: 1rem;
-            // justify-content: space-around;
-            // max-width: 500px;
+                #272626ce, #272626, rgba(198, 198, 198, 0.053)) 
     }
 
     &__line-container {
         display: flex;
         justify-content: space-between;
-        padding: 1.5em;
-        width: 70%;
+        padding: 1em;
+        width: 75%;
     }
 
     &__line-container-2 {
@@ -66,14 +62,24 @@ body {
         font-weight: $Black;
     }
 
+    &__number-1 {
+        padding-right: 2.5rem;
+        font-weight: $Black;
+    }
+
+    &__medal-container {
+        display: flex;
+        width: 45%;
+        justify-content: space-between;
+    }
+    
     &__team {
         font-size: 1.4em;
-        // padding-right: 6rem;
-        // height: 50px;
+        padding-left: 0;
+        padding-right: 3.5em;
     }
 
     &__medal {
-        // margin-right: 2rem;
         width: 1.5em;
 
         &--no-margin {
@@ -88,7 +94,6 @@ body {
         background-color: rgba(0, 0, 0, 0.5);
         padding: .5rem 1rem;
         margin-bottom: .5rem;
-        // width: 30%;
     }
 
     &__flag {
@@ -129,10 +134,9 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
-    // position: relative;
+    position: relative;
     margin: 0;
     padding: 0;
-    position: absolute;
     top: 0;
     left: 0;
     overflow: none;
@@ -146,8 +150,7 @@ a {
     -webkit-background-clip: text;
     color: transparent;
     display: inline-block;
-    // padding: 1em 0;
-    // margin-left: 0.1em;
+
     letter-spacing: 2px;
     position: absolute;
     top: 1em;
@@ -157,8 +160,7 @@ a {
 .updates {
     display: flex;
     width: 50%;
-    // height: 50vh;
-    // gap: 1.5em;
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -171,10 +173,12 @@ a {
         width: 45%;
         min-width: 600px;
         padding: 0 1em;
+        position: absolute;
+        bottom: 0;
     }
 
     .updates__news-container {
-        background: linear-gradient(90deg, #F8F8F8, rgba(255, 255, 255, 0));
+        background: linear-gradient(90deg, #F8F8F8, rgba(255, 239, 239, 0));
         width: 100%;
         height: 100%;
         padding: 1em 0 1em;
@@ -204,10 +208,6 @@ a {
         letter-spacing: 2px;
     }
 
-    // &__line {
-    //     // border: 1px solid red;
-    //     color: red;
-    // }
 
     .updates__medals {
         background: linear-gradient(135deg, #0d282a, #137177, #1CA99F, #f8f8f800);
