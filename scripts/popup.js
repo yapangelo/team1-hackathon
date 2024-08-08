@@ -1633,9 +1633,3 @@ const japNewArray = popupDataParser(japArray)
 const itaNewArray = popupDataParser(itaArray)
 const nedNewArray = popupDataParser(nedArray)
 const gerNewArray = popupDataParser(gerArray)
-
-// Testing Grounds
-
-const popText = document.querySelector(".popuptext")
-console.log(chinaNewArray[0])
-popText.innerHTML += "Hello <br> World"

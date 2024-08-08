@@ -1,8 +1,11 @@
-const popUp = document.getElementById("popup")
-popUp.addEventListener('click', function() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-})
+const popUps = document.querySelectorAll(".popup")
+const myPopups = document.querySelectorAll(".popuptext")
+for (let i = 0; i < popUps.length; i++) {
+    popUps[i].addEventListener('click', function() {
+        var popup = myPopups[i];
+        popup.classList.toggle("show");
+    })
+}
 
 // Get Data from Olympic API
 
@@ -29,6 +32,7 @@ function medalParser(data) {
 async function getCountry() {
     const response = await olympicApi.getCountries()
     const countryData = medalParser(response)
+    console.log(countryData)
     return countryData
 }
 
@@ -60,6 +64,62 @@ async function countryRender() {
     
 }
 
+// Render Popup Data to HTML
+
+const popText = document.querySelector(".popuptext")
+
+const popupArrayToName = (array) => {
+    const popupLine = `${array[0]}: `
+    return popupLine
+}
+
+const popupArrayToString = (array) => {
+    const popupLine = `Gold: ${array[1]}, Silver: ${array[2]}, Bronze: ${array[3]}, Total: ${array[4]}`
+    return popupLine
+}
+
+const popupTextRender = (array, popText) => {
+    popText.innerHTML = ""
+    for(let i = 0; i < array.length; i++) {
+        popText.innerHTML += `<b>${popupArrayToName(array[i])}</b>` + popupArrayToString(array[i]) + "<br>"
+    }
+}
+
+const popupFullRender = () => {
+    const countryID = document.querySelectorAll(".mt__dynamic-id")
+    const popText = document.querySelectorAll(".popuptext")
+    for (let i = 0; i < popText.length; i++) {
+        console.log(countryID[i].innerText)
+        if (countryID[i].innerText === "CHN") {
+            popupTextRender(chinaNewArray, popText[i])
+        } else if (countryID[i].innerText === "USA") {
+            popupTextRender(usaNewArray, popText[i])
+        } else if (countryID[i].innerText === "AUS") {
+            popupTextRender(ausNewArray, popText[i])
+        } else if (countryID[i].innerText === "FRA") {
+            popupTextRender(fraNewArray, popText[i])
+        } else if (countryID[i].innerText === "GBR") {
+            popupTextRender(gbrNewArray, popText[i])
+        } else if (countryID[i].innerText === "KOR") {
+            popupTextRender(korNewArray, popText[i])
+        } else if (countryID[i].innerText === "JPN") {
+            popupTextRender(japNewArray, popText[i])
+        } else if (countryID[i].innerText === "ITA") {
+            popupTextRender(itaNewArray, popText[i])
+        } else if (countryID[i].innerText === "NED") {
+            popupTextRender(nedNewArray, popText[i])
+        } else if (countryID[i].innerText === "GER") {
+            popupTextRender(gerNewArray, popText[i])
+        }
+    }
+
+}
+
 // Call API Functions
 
-countryRender()
+const popupFinalRender = async () => {
+    await countryRender()
+    popupFullRender()
+}
+
+popupFinalRender()
