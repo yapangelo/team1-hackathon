@@ -3,6 +3,11 @@ const myPopups = document.querySelectorAll(".popuptext")
 for (let i = 0; i < popUps.length; i++) {
     popUps[i].addEventListener('click', function() {
         var popup = myPopups[i];
+        for (let j = 0; j < popUps.length; j++) {
+            if (j != i) {
+                myPopups[j].classList.remove("show")
+            }
+        }
         popup.classList.toggle("show");
     })
 }
@@ -78,9 +83,33 @@ const popupArrayToString = (array) => {
 }
 
 const popupTextRender = (array, popText) => {
-    popText.innerHTML = ""
+    // popText.innerHTML = ""
     for(let i = 0; i < array.length; i++) {
         popText.innerHTML += `<b>${popupArrayToName(array[i])}</b>` + popupArrayToString(array[i]) + "<br>"
+    }
+}
+
+const popupTeamName = (country, popText) => {
+    if (country == "USA") {
+        popText.innerHTML = "<b>Team USA<b/> <br>"
+    } else if (country == "CHN") {
+        popText.innerHTML = "<b>Team China<b/> <br>"
+    } else if (country == "AUS") {
+        popText.innerHTML = "<b>Team Australia<b/> <br>"
+    } else if (country == "FRA") {
+        popText.innerHTML = "<b>Team France<b/> <br>"
+    } else if (country == "GBR") {
+        popText.innerHTML = "<b>Team Great Britain<b/> <br>"
+    } else if (country == "KOR") {
+        popText.innerHTML = "<b>Team Korea<b/> <br>"
+    } else if (country == "JPN") {
+        popText.innerHTML = "<b>Team Japan<b/> <br>"
+    } else if (country == "ITA") {
+        popText.innerHTML = "<b>Team Italy<b/> <br>"
+    } else if (country == "NED") {
+        popText.innerHTML = "<b>Team Netherlands<b/> <br>"
+    } else if (country == "GER") {
+        popText.innerHTML = "<b>Team Germany<b/> <br>"
     }
 }
 
@@ -89,24 +118,34 @@ const popupFullRender = () => {
     const popText = document.querySelectorAll(".popuptext")
     for (let i = 0; i < popText.length; i++) {
         if (countryID[i].innerText === "CHN") {
+            popupTeamName("CHN", popText[i])
             popupTextRender(chinaNewArray, popText[i])
         } else if (countryID[i].innerText === "USA") {
+            popupTeamName("USA", popText[i])
             popupTextRender(usaNewArray, popText[i])
         } else if (countryID[i].innerText === "AUS") {
+            popupTeamName("AUS", popText[i])
             popupTextRender(ausNewArray, popText[i])
         } else if (countryID[i].innerText === "FRA") {
+            popupTeamName("FRA", popText[i])
             popupTextRender(fraNewArray, popText[i])
         } else if (countryID[i].innerText === "GBR") {
+            popupTeamName("GBR", popText[i])
             popupTextRender(gbrNewArray, popText[i])
         } else if (countryID[i].innerText === "KOR") {
+            popupTeamName("KOR", popText[i])
             popupTextRender(korNewArray, popText[i])
         } else if (countryID[i].innerText === "JPN") {
+            popupTeamName("JPN", popText[i])
             popupTextRender(japNewArray, popText[i])
         } else if (countryID[i].innerText === "ITA") {
+            popupTeamName("ITA", popText[i])
             popupTextRender(itaNewArray, popText[i])
         } else if (countryID[i].innerText === "NED") {
+            popupTeamName("NED", popText[i])
             popupTextRender(nedNewArray, popText[i])
         } else if (countryID[i].innerText === "GER") {
+            popupTeamName("GER", popText[i])
             popupTextRender(gerNewArray, popText[i])
         }
     }
