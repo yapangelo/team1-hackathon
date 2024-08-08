@@ -40,24 +40,6 @@ async function getCountryAll() {
 
 // Populate Data from Olympic API
 
-async function countryRenderOne() {
-    const countryFlag = document.querySelector(".mt__flag")
-    const countryTeam = document.querySelector(".mt__dynamic-team")
-    const countryGold = document.querySelector(".mt__gold-medals")
-    const countrySilver = document.querySelector(".mt__silver-medals")
-    const countryBronze = document.querySelector(".mt__bronze-medals")
-    const countryTotal = document.querySelector(".mt__total-medals")
-
-    const data = await getCountry()
-
-    countryTeam.innerText = data[0].id
-    countryFlag.src = data[0].flag
-    countryGold.innerText = data[0].gold
-    countrySilver.innerText = data[0].silver
-    countryBronze.innerText = data[0].bronze
-    countryTotal.innerText = data[0].total
-}
-
 async function countryRender() {
     const countryFlag = document.querySelectorAll(".mt__flag")
     const countryTeam = document.querySelectorAll(".mt__dynamic-team")

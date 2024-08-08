@@ -19,18 +19,3 @@ class OlympicApi {
         return fullData
     }
 }
-
-const testCall= async () => {
-    // const response = await axios.get("https://apis.codante.io/olympic-games/countries")
-    // console.log(response.data.data)
-    const fullData = []
-        for (let i = 1; i < 6; i++) {
-            const response = await axios.get("https://apis.codante.io/olympic-games/countries?page=" + i)
-            for (let j = 0; j < response.data.data.length; j++) {
-                fullData.push(response.data.data[j])
-            }
-        }
-    console.log(fullData)
-}
-
-// testCall()
