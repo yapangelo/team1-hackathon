@@ -42,7 +42,7 @@ async function getCountryAll() {
 
 async function countryRender() {
     const countryFlag = document.querySelectorAll(".mt__flag")
-    const countryTeam = document.querySelectorAll(".mt__dynamic-team")
+    const countryTeam = document.querySelectorAll(".mt__dynamic-id")
     const countryGold = document.querySelectorAll(".mt__gold-medals")
     const countrySilver = document.querySelectorAll(".mt__silver-medals")
     const countryBronze = document.querySelectorAll(".mt__bronze-medals")
