@@ -29,7 +29,7 @@ body {
     border-radius: 2rem;
     box-sizing: border-box;
     top: 30%;
-    left: 10%;
+    overflow: hidden;
 
     &__line {
         display: flex;
